@@ -2,7 +2,15 @@ const space = " "
 
 function splitString(stringToSplit, separator) {
   const arrayOfStrings = stringToSplit.split(separator)
-  console.log('The array has ', arrayOfStrings.length, ' elements: ', arrayOfStrings.join(' / '))
+  const newArray = []
+  arrayOfStrings.forEach(function(word) {
+    if (word.length >= 3) {
+      newArray.push(word);
+    }
+    newArray.reverse();
+
+  });
+  alert(newArray.join(" "))
 }
 
 
